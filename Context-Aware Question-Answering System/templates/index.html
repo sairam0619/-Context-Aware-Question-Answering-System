@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Context-Aware Question-Answering System</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #4285f4;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+            color: #555;
+        }
+
+        textarea, input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #4285f4;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #3367d6;
+        }
+
+        h3 {
+            color: #4285f4;
+            margin-top: 20px;
+        }
+
+        p {
+            margin: 10px 0;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>🚀 Context-Aware Question-Answering System 🚀</h1>
+    <form method="POST" action="/answer">
+        <label for="document">Document:</label>
+        <textarea name="document" rows="4" cols="50" placeholder="Enter your document here..."></textarea><br>
+        <label for="question">Question:</label>
+        <input type="text" name="question" placeholder="Ask your question..."><br>
+        <input type="submit" value="Get Awesome Answer">
+    </form>
+    {% if document %}
+        <h3>🌟 Result:</h3>
+        <p>📄 Document: {{ document }}</p>
+        <p>❓ Question: {{ question }}</p>
+        <p>🎉 Answer: {{ response }}</p>
+    {% endif %}
+</body>
+</html>
